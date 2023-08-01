@@ -1,0 +1,17 @@
+# name of the workflow
+name: Test Workflow
+# when to execute the workflow (events to trigger)
+# workflow_dispatch (manually triggered)
+on: workflow_dispatch
+# jobs to run
+jobs:
+  #job_name
+  test-job:
+    #runner environment
+    runs-on: ubuntu-latest
+    #steps to execute, this is an array
+    steps:
+      - name: Print Greeting
+        run: echo "Hi There!"
+      - name: Print Goodbye
+        run: echo "Bye There!"
